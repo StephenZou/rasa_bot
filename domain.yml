@@ -1,0 +1,43 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- thanks
+responses:
+  utter_greet:
+  - text: 你好！
+  - text: 哈喽！
+  - text: 你好，很高兴见到你！
+  - text: 嗨！
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: '这些或许能够让你振作起来:'
+  utter_did_that_help:
+  - text: 有什么需要我帮助的么？
+  - text: 我能帮你做些什么？
+  utter_happy:
+  - text: 理想和现实总是有差距的，幸好还有差距，不然，谁还稀罕理想？
+  - text: 振作起来，加油！
+  - text: 人生，没有永远的伤痛，再深的痛，在切之时，伤口总会痊愈。人生，没有过不去的坎，你不可以坐在坎边等它消失，你只能想办法穿过它。人生，没有永远的爱情，没有结局的感情，总要结束；不能拥有的人，总会忘记。
+  - text: 为了明天的希望，让我们忘了今天的痛苦。
+  - text: 不论你经历了什么，在经历着什么，你总该明白，人生的路，总要走下去的。只要我们没有了断自己的决心，要生存下去，我们只能自救，让自己尽可能地活得少些痛。
+  utter_goodbye:
+  - text: 再见！
+  - text: 明天见！
+  - text: 下次见！
+  - text: 拜拜！
+  utter_iamabot:
+  - text: 我是机器人，是你的智能助理。
+  utter_thanks:
+  - text: 不客气！
+  - text: 能帮到你是我的荣幸！
+  - text: 不用跟我客气！
+  - text: 不客气，我喜欢助人为乐！
+  - text: 你太客气啦！
