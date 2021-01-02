@@ -17,4 +17,9 @@ rules:
   - intent: thanks
   - action: utter_thanks
 
+- rule: Introduce myself
+  steps:
+  - intent: query_name
+  - action: utter_name
+
 

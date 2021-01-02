@@ -82,9 +82,22 @@ nlu:
     - 我在和机器人说话么？
     - 我在和人类说话么？
     - 你是机器人还是人类？
-    
+
 - intent: thanks
   examples: |
     - 谢谢！
     - 感谢你！
     - 谢谢你！
+
+- intent: query_name
+  examples: |
+    - 你是谁？
+    - 你叫什么名字？
+
+- intent: query_province
+  examples: |
+    - [山东](province)的[省会](capital)是哪个城市？
+    - [山东](province)的[省会](capital)是哪个？
+    - [济南](city)是哪个省的省会(capital)？
+    - [山东](province)的[简称](shortname)是什么？
+    - [鲁](abbreviation)是哪个省的简称(shortname)？

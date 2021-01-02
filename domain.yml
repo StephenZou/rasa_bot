@@ -10,6 +10,7 @@ intents:
 - mood_unhappy
 - bot_challenge
 - thanks
+- query_name
 responses:
   utter_greet:
   - text: 你好！
@@ -20,8 +21,8 @@ responses:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: '这些或许能够让你振作起来:'
   utter_did_that_help:
-  - text: 有什么需要我帮助的么？
-  - text: 我能帮你做些什么？
+  - text: 是不是需要我的帮助呀？
+  - text: 需要我给你来点鼓励么？
   utter_happy:
   - text: 理想和现实总是有差距的，幸好还有差距，不然，谁还稀罕理想？
   - text: 振作起来，加油！
@@ -41,3 +42,24 @@ responses:
   - text: 不用跟我客气！
   - text: 不客气，我喜欢助人为乐！
   - text: 你太客气啦！
+  utter_name:
+  - text: 我是的你智能助理，大宝。
+actions:
+- action_query_knowledge_base
+entities:
+  - province
+  - shortname
+  - abbreviation
+  - city
+  - capital
+slots:
+  province:
+    type: unfeaturized
+  shortname:
+    type: unfeaturized
+  abbreviation:
+    type: unfeaturized
+  city:
+    type: unfeaturized
+  capital:
+    type: unfeaturized

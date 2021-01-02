@@ -30,3 +30,12 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: ask province
+  steps:
+  - intent: utter_greet
+  - action: utter_greet
+  - intent: query_province
+  - action: action_query_knowledge_base
+  - intent: thanks
+  - action: utter_thanks

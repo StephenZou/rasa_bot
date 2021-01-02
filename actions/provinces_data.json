@@ -1,0 +1,28 @@
+{
+    "provinces": [
+        {
+            "id": 0,
+            "name": "北京",
+            "capital": "北京",
+            "abbreviation": "京"
+        },
+        {
+            "id": 1,
+            "name": "山东",
+            "capital": "济南",
+            "abbreviation": "鲁"
+        },
+        {
+            "id": 2,
+            "name": "陕西",
+            "capital": "西安",
+            "abbreviation": "陕"
+        },
+        {
+            "id": 3,
+            "name": "山西",
+            "capital": "太原",
+            "abbreviation": "晋"
+        }
+    ]
+}
