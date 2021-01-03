@@ -11,6 +11,30 @@ intents:
 - bot_challenge
 - thanks
 - query_name
+- query_province
+- utter_greet
+entities:
+- province
+- shortname
+- abbreviation
+- city
+- capital
+slots:
+  abbreviation:
+    type: unfeaturized
+    influence_conversation: false
+  capital:
+    type: unfeaturized
+    influence_conversation: false
+  city:
+    type: unfeaturized
+    influence_conversation: false
+  province:
+    type: unfeaturized
+    influence_conversation: false
+  shortname:
+    type: unfeaturized
+    influence_conversation: false
 responses:
   utter_greet:
   - text: 你好！
@@ -46,20 +70,3 @@ responses:
   - text: 我是的你智能助理，大宝。
 actions:
 - action_query_knowledge_base
-entities:
-  - province
-  - shortname
-  - abbreviation
-  - city
-  - capital
-slots:
-  province:
-    type: unfeaturized
-  shortname:
-    type: unfeaturized
-  abbreviation:
-    type: unfeaturized
-  city:
-    type: unfeaturized
-  capital:
-    type: unfeaturized

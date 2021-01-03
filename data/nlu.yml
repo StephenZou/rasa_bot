@@ -100,4 +100,4 @@ nlu:
     - [山东](province)的[省会](capital)是哪个？
     - [济南](city)是哪个省的省会(capital)？
     - [山东](province)的[简称](shortname)是什么？
-    - [鲁](abbreviation)是哪个省的简称(shortname)？
+    - [鲁](abbreviation)是哪个省的[简称](shortname)？

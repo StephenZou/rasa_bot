@@ -13,6 +13,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
 from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
+import os
 
 
 class ActionHelloWorld(Action):
@@ -30,6 +31,6 @@ class ActionHelloWorld(Action):
 
 class ActionQueryProvince(ActionQueryKnowledgeBase):
     def __init__(self):
-        knowledge_base=InMemoryKnowledgeBase("provinces_data.json")
-        super.__init__(knowledge_base)
+        knowledge_base=InMemoryKnowledgeBase("./provinces_data.json")
+        super().__init__(knowledge_base)
 
