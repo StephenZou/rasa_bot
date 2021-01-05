@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -11,7 +10,6 @@ nlu:
     - 见到你很高兴
     - 喂
     - 嘿
-
 - intent: goodbye
   examples: |
     - 再见
@@ -23,7 +21,6 @@ nlu:
     - 晚安
     - 我睡啦
     - 我去洗澡啦
-
 - intent: affirm
   examples: |
     - 是的
@@ -34,7 +31,6 @@ nlu:
     - 正确
     - 棒
     - 绝对啊
-
 - intent: deny
   examples: |
     - 不
@@ -46,7 +42,6 @@ nlu:
     - 不可以
     - 当然不了
     - 不了
-
 - intent: mood_great
   examples: |
     - 太棒了
@@ -59,7 +54,6 @@ nlu:
     - 挺不错的
     - 太令人惊讶了
     - 太好了
-
 - intent: mood_unhappy
   examples: |
     - 今天太糟了
@@ -70,11 +64,9 @@ nlu:
     - 我不开心
     - 我好难过
     - 我不高兴
-    - 我不开心
     - 糟透了
     - 555
     - 太烂了
-
 - intent: bot_challenge
   examples: |
     - 你是机器人么？
@@ -82,18 +74,28 @@ nlu:
     - 我在和机器人说话么？
     - 我在和人类说话么？
     - 你是机器人还是人类？
-
 - intent: thanks
   examples: |
     - 谢谢！
     - 感谢你！
     - 谢谢你！
-
 - intent: query_name
   examples: |
     - 你是谁？
     - 你叫什么名字？
-
+- intent: intro_myself
+  examples: |
+    - 你好！我的名字是[小刚](username)。
+    - 你好！我是[王五](username)。
+    - 你好！我是[小明](username)。
+    - 你好！我是[小红](username)。
+    - 哈喽！我是[小刚](username)。
+    - 我的名字是[大壮](username)。
+    - 我的名字是[李四](username)。
+    - 我是[大明](username)。
+    - 我是[强强](username)。
+    - 我的名字是[张三](username)。
+    - 你好！我的名字是[邹承元](username)[邹承元](username)
 - intent: query_province
   examples: |
     - [山东](province)的[省会](capital)是哪个城市？

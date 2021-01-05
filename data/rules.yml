@@ -22,4 +22,9 @@ rules:
   - intent: query_name
   - action: utter_name
 
+- rule: Say hello to user
+  steps:
+  - intent: intro_myself
+  - action: action_say_hello
+
 

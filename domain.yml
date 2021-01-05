@@ -13,12 +13,14 @@ intents:
 - query_name
 - query_province
 - utter_greet
+- intro_myself
 entities:
 - province
 - shortname
 - abbreviation
 - city
 - capital
+- username
 slots:
   abbreviation:
     type: unfeaturized
@@ -34,6 +36,9 @@ slots:
     influence_conversation: false
   shortname:
     type: unfeaturized
+    influence_conversation: false
+  username:
+    type: text
     influence_conversation: false
 responses:
   utter_greet:
@@ -70,3 +75,4 @@ responses:
   - text: 我是的你智能助理，大宝。
 actions:
 - action_query_knowledge_base
+- action_say_hello

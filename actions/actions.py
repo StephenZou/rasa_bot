@@ -31,6 +31,28 @@ class ActionHelloWorld(Action):
 
 class ActionQueryProvince(ActionQueryKnowledgeBase):
     def __init__(self):
-        knowledge_base=InMemoryKnowledgeBase("./provinces_data.json")
+        abs_path=os.path.abspath(__file__)
+        dir_name=os.path.dirname(abs_path)
+        file_path=os.path.join(dir_name, "provinces_data.json")
+        knowledge_base=InMemoryKnowledgeBase(file_path)
         super().__init__(knowledge_base)
 
+# class ActionCompute(Action):
+#     def name(self) -> Text:
+#         return "action_compute"
+    
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         dispatcher.
+
+class ActionSayHello(Action):
+    def name(self) -> Text:
+        return "action_say_hello"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        username=tracker.get_slot("username")
+        repos = "你好！{}!".format(username)
+        dispatcher.utter_message(text=repos)
+        return []
