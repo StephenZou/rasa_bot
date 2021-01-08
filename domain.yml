@@ -14,6 +14,8 @@ intents:
 - query_province
 - utter_greet
 - intro_myself
+- request_weather
+- inform
 entities:
 - province
 - shortname
@@ -21,9 +23,15 @@ entities:
 - city
 - capital
 - username
+- date_time
+- address
 slots:
   abbreviation:
     type: unfeaturized
+    influence_conversation: false
+  address:
+    type: any
+    auto_fill: false
     influence_conversation: false
   capital:
     type: unfeaturized
@@ -31,14 +39,21 @@ slots:
   city:
     type: unfeaturized
     influence_conversation: false
+  date_time:
+    type: any
+    auto_fill: false
+    influence_conversation: false
+  name:
+    type: text
+    influence_conversation: false
   province:
+    type: unfeaturized
+    influence_conversation: false
+  requested_slot:
     type: unfeaturized
     influence_conversation: false
   shortname:
     type: unfeaturized
-    influence_conversation: false
-  username:
-    type: text
     influence_conversation: false
 responses:
   utter_greet:
@@ -73,6 +88,14 @@ responses:
   - text: 你太客气啦！
   utter_name:
   - text: 我是的你智能助理，大宝。
+  utter_ask_date_time:
+  - text: 请问您要查询哪一天的天气？
+  utter_ask_address:
+  - text: 请问您要查下哪里的天气？
 actions:
 - action_query_knowledge_base
 - action_say_hello
+- utter_ask_date_time
+- utter_ask_address
+forms:
+  weather_form: {}

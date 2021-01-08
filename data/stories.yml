@@ -39,3 +39,40 @@ stories:
   - action: action_query_knowledge_base
   - intent: thanks
   - action: utter_thanks
+
+- story: weather_story1
+  steps:
+  - intent: request_weather
+  - action: weather_form
+  - active_loop: weather_form
+  - slot_was_set:
+    - requested_slot: date_time
+  - slot_was_set:
+    - date_time: 明天
+  - slot_was_set:
+    - requested_slot: address
+  - slot_was_set:
+    - address: 广州
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - or:
+    - intent: inform
+      entities:
+      - date_time: 后天
+    - intent: request_weather
+      entities:
+      - date_time: 后天
+  - action: weather_form
+  - active_loop: weather_form
+  - slot_was_set:
+    - date_time: 明天
+  - slot_was_set:
+    - address: 广州
+  - slot_was_set:
+    - date_time: 后天
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: thanks
+  - action: utter_thanks
